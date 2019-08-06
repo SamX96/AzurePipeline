@@ -1,4 +1,11 @@
 # Jekyll site
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscription: 'Free Trial(72e17ae8-ba29-45db-b92d-e1628f43869f)'
+    azureContainerRegistry: '{"loginServer":"x950cr.azurecr.io", "id" : "/subscriptions/72e17ae8-ba29-45db-b92d-e1628f43869f/resourceGroups/Admin/providers/Microsoft.ContainerRegistry/registries/x950CR"}'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Run a Docker Compose command'
 # Package your Jekyll site using the jekyll/builder Docker container image.
 # Add steps that build, test, save build artifacts, deploy, and more:
 # https://aka.ms/yaml
